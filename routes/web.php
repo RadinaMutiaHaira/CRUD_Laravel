@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PelamarController;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
+=======
+>>>>>>> b0ad48fb166cceac24b5e2975f61ee26ca08325b
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +19,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 
+<<<<<<< HEAD
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -32,3 +36,17 @@ Route::get('/deletedata/{id}', [PelamarController::class, 'deletedata'])->name('
 Auth::routes();
 Route::get('/', [App\Http\Controllers\PelamarController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\PelamarController::class, 'index'])->name('home');
+=======
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/lowonganpekerjaan', [PelamarController::class, 'index'])->name('lowonganpekerjaan');
+Route::get('/tambahpelamar', [PelamarController::class, 'tambahpelamar'])->name('tambahpelamar');
+Route::post('/inputdata', [PelamarController::class, 'inputdata'])->name('inputdata');
+
+Route::get('/tampildata/{id}', [PelamarController::class, 'tampildata'])->name('tampildata');
+Route::post('/updatedata/{id}', [PelamarController::class, 'updatedata'])->name('updatedata');
+
+Route::get('/deletedata/{id}', [PelamarController::class, 'deletedata'])->name('deletedata');
+>>>>>>> b0ad48fb166cceac24b5e2975f61ee26ca08325b

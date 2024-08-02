@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class PelamarController extends Controller
 {
+<<<<<<< HEAD
     public function __construct()
     {
         $this->middleware('auth');
@@ -18,6 +19,8 @@ class PelamarController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
+=======
+>>>>>>> b0ad48fb166cceac24b5e2975f61ee26ca08325b
     public function index()
     {
         $data = Pelamar::all();
@@ -38,7 +41,11 @@ class PelamarController extends Controller
         ]);
 
         Pelamar::create($request->all());
+<<<<<<< HEAD
         return redirect()->route('home')->with('success', 'Data berhasil ditambahkan');
+=======
+        return redirect()->route('lowonganpekerjaan')->with('success', 'Data berhasil ditambahkan');
+>>>>>>> b0ad48fb166cceac24b5e2975f61ee26ca08325b
     }
 
     public function tampildata($id)
@@ -51,13 +58,21 @@ class PelamarController extends Controller
     {
         $data = Pelamar::find($id);
         $data->update($request->all());
+<<<<<<< HEAD
         return redirect()->route('home')->with('success', 'Data berhasil diubah');
+=======
+        return redirect()->route('lowonganpekerjaan')->with('success', 'Data berhasil diubah');
+>>>>>>> b0ad48fb166cceac24b5e2975f61ee26ca08325b
     }
 
     public function deletedata($id)
     {
         $data = Pelamar::find($id);
         $data->delete();
+<<<<<<< HEAD
         return redirect()->route('home')->with('success', 'Data berhasil dihapus');
+=======
+        return redirect()->route('lowonganpekerjaan')->with('success', 'Data berhasil dihapus');
+>>>>>>> b0ad48fb166cceac24b5e2975f61ee26ca08325b
     }
 }
